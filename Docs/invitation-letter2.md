@@ -14,7 +14,7 @@ Create a new HTML invitation page based on reference materials, focusing on TK-Y
   <details>
     - **Date**: October 9-11, 2025 9AM-5PM
     - **Event**: International Trade Fair for Rehabilitation and Physiotherapy
-    - **Location**: Zone C2
+    - **Location**: Zone C12
     - **Target Audience**: Trade fair attendees interested in rehabilitation and physiotherapy
   </details>
 </event>

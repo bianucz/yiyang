@@ -5,19 +5,22 @@ This document outlines the requirements for creating an HTML invitation page for
 </format>
 
 ## <project_overview>
+
 Create a new HTML invitation page based on reference materials, focusing on TK-YIYANG cosmetics products for the International Trade Fair for Rehabilitation and Physiotherapy.
 </project_overview>
 
 ## <event>
+
   <details>
     - **Date**: October 9-11, 2025
     - **Event**: International Trade Fair for Rehabilitation and Physiotherapy
-    - **Location**: Zone C2
+    - **Location**: Zone C12
     - **Target Audience**: Trade fair attendees interested in rehabilitation and physiotherapy
   </details>
 </event>
 
 ## <brand>
+
   <identity>
     - **Brand**: TK-YIYANG
     - **Focus**: Natural cosmetics (not tech products)
@@ -27,16 +30,13 @@ Create a new HTML invitation page based on reference materials, focusing on TK-Y
 </brand>
 
 ## <products>
-  <cosmetic_lineup>
-    1. Regenerujący balsam rozgrzewający (Regenerating warming balm)
-    2. Płyn pod oczy z ekstraktami roślinnymi (Eye treatment with plant extracts)
-    3. Odmładzająca maska do twarzy (Rejuvenating face mask)
-    4. Spray odmładzający (Rejuvenating spray)
-    5. Krem regenerująco-odmładzający (Regenerating-rejuvenating cream)
-  </cosmetic_lineup>
+
+<cosmetic_lineup> 1. Regenerujący balsam rozgrzewający (Regenerating warming balm) 2. Płyn pod oczy z ekstraktami roślinnymi (Eye treatment with plant extracts) 3. Odmładzająca maska do twarzy (Rejuvenating face mask) 4. Spray odmładzający (Rejuvenating spray) 5. Krem regenerująco-odmładzający (Regenerating-rejuvenating cream)
+</cosmetic_lineup>
 </products>
 
 ## <design_requirements>
+
   <layout>
     - Simple and mobile-friendly design
     - Remove all layout borders and complicated layouts
@@ -59,6 +59,7 @@ Create a new HTML invitation page based on reference materials, focusing on TK-Y
 </design_requirements>
 
 ## <technical_specifications>
+
   <requirements>
     - HTML format
     - Mobile-first responsive design
