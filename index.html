@@ -90,43 +90,62 @@
             flex-wrap: wrap;
         }
         
-        .product-item {
+        .product-item, .product-mini {
             width: 120px;
             height: 180px;
-            background: linear-gradient(to bottom, #f8f8f8, #e8e8e8);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
             border-radius: 15px 15px 5px 5px;
             position: relative;
             box-shadow: 0 8px 20px rgba(0,0,0,0.3);
         }
         
-        .product-item.tube {
+        .product-mini.tube {
             border-radius: 25px;
+            background-image: url('images/regenerating-body-balm.svg');
         }
         
-        .product-item.spray {
-            background: linear-gradient(to bottom, #f0f0f0, #d0d0d0);
+        .product-mini.spray {
+            background-image: url('images/plant-extract-spray.svg');
         }
         
-        .product-item.serum {
+        .product-mini.serum {
             width: 80px;
             height: 140px;
+            background-image: url('images/eye-serum.svg');
         }
         
-        .product-item.cream {
+        .product-mini.spray-dark {
+            background-image: url('images/rejuvenating-spray-dark.svg');
+        }
+        
+        .product-mini.cream {
             width: 140px;
             height: 100px;
             border-radius: 50%;
-            background: linear-gradient(to bottom, #f5f5f5, #e0e0e0);
+            background-image: url('images/face-cream.svg');
+        }
+        
+        .main-product-display {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(255,255,255,0.1);
+            border-radius: 20px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .product-collection {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            flex-wrap: wrap;
         }
         
         .product-label {
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 8px;
-            color: #8B4CB8;
-            font-weight: bold;
+            display: none;
         }
         
         .description {
@@ -180,23 +199,38 @@
         .product-image {
             width: 120px;
             height: 180px;
-            background: linear-gradient(to bottom, #f8f8f8, #e8e8e8);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
             border-radius: 15px;
             box-shadow: 0 8px 20px rgba(0,0,0,0.3);
             flex-shrink: 0;
             position: relative;
         }
         
-        .product-image::before {
-            content: '';
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            right: 10px;
-            height: 40px;
-            background: linear-gradient(135deg, #8B4CB8, #5D2E8B);
-            border-radius: 5px;
+        .product-image.balm {
+            background-image: url('images/regenerating-body-balm.svg');
         }
+        
+        .product-image.eye-liquid {
+            background-image: url('images/plant-extract-spray.svg');
+        }
+        
+        .product-image.face-mask {
+            background-image: url('images/face-mask.svg');
+        }
+        
+        .product-image.spray {
+            background-image: url('images/rejuvenating-spray-dark.svg');
+        }
+        
+        .product-image.cream {
+            background-image: url('images/face-cream.svg');
+            width: 140px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        
         
         .product-info {
             flex: 1;
@@ -322,7 +356,7 @@
     <!-- Page 2 -->
     <div class="page page-2">
         <div class="product-section">
-            <div class="product-image"></div>
+            <div class="product-image balm"></div>
             <div class="product-info">
                 <h2 class="product-title">Regenerujący balsam rozgrzewający do ciała</h2>
                 <p class="product-description">
@@ -338,7 +372,7 @@
         </div>
         
         <div class="product-section">
-            <div class="product-image"></div>
+            <div class="product-image eye-liquid"></div>
             <div class="product-info">
                 <h2 class="product-title">Płyn pod oczy z ekstraktami roślinnymi</h2>
                 <p class="product-description">
@@ -352,7 +386,7 @@
         </div>
         
         <div class="product-section">
-            <div class="product-image"></div>
+            <div class="product-image face-mask"></div>
             <div class="product-info">
                 <h2 class="product-title">Odmładzająca maska do twarzy z ekstraktami roślinnymi</h2>
                 <p class="product-description">
@@ -365,7 +399,7 @@
         </div>
         
         <div class="product-section spray-product">
-            <div class="product-image"></div>
+            <div class="product-image spray"></div>
             <div class="product-info">
                 <h2 class="product-title">Spray odmładzający z ekstraktami roślinnymi</h2>
                 <p class="product-description">
@@ -381,7 +415,7 @@
         </div>
         
         <div class="product-section cream-product">
-            <div class="product-image"></div>
+            <div class="product-image cream"></div>
             <div class="product-info">
                 <h2 class="product-title">Krem regenerująco-odmładzający z agarem</h2>
                 <p class="product-description">

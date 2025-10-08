@@ -1,0 +1,24 @@
+<svg width="140" height="100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Cream jar body -->
+  <ellipse cx="70" cy="60" rx="60" ry="35" fill="#f5f5f5" stroke="#e0e0e0" stroke-width="2"/>
+  
+  <!-- Jar lid -->
+  <ellipse cx="70" cy="25" rx="55" ry="20" fill="#FFD700" stroke="#e6c200" stroke-width="2"/>
+  <ellipse cx="70" cy="20" rx="50" ry="15" fill="#fff5b3"/>
+  
+  <!-- Label on jar -->
+  <ellipse cx="70" cy="65" rx="45" ry="25" fill="#ffffff" stroke="#ddd" stroke-width="1"/>
+  
+  <!-- Brand name -->
+  <text x="70" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#8B4CB8">TK-YIYANG</text>
+  
+  <!-- Leaf icon -->
+  <path d="M55 65 Q65 60, 75 65 Q70 75, 60 80 Q55 75, 55 65" fill="#4CAF50"/>
+  <path d="M60 65 L65 75" stroke="#4CAF50" stroke-width="1"/>
+  
+  <!-- Product name -->
+  <text x="70" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#666">Face Cream</text>
+  
+  <!-- Volume -->
+  <text x="70" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#999">50g/1.76 OZ</text>
+</svg>

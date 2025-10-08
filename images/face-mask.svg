@@ -1,0 +1,24 @@
+<svg width="120" height="180" xmlns="http://www.w3.org/2000/svg">
+  <!-- Tube body -->
+  <rect x="10" y="20" width="100" height="140" rx="25" ry="25" fill="#f8f8f8" stroke="#e0e0e0" stroke-width="2"/>
+  
+  <!-- Cap -->
+  <rect x="35" y="5" width="50" height="20" rx="10" ry="10" fill="#8B4CB8"/>
+  
+  <!-- Label background -->
+  <rect x="15" y="40" width="90" height="80" rx="15" ry="15" fill="#ffffff" stroke="#ddd" stroke-width="1"/>
+  
+  <!-- Brand name -->
+  <text x="60" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#8B4CB8">TK-YIYANG</text>
+  
+  <!-- Leaf icon -->
+  <path d="M45 70 Q55 65, 65 70 Q60 80, 50 85 Q45 80, 45 70" fill="#4CAF50"/>
+  <path d="M50 70 L55 80" stroke="#4CAF50" stroke-width="1"/>
+  
+  <!-- Product name -->
+  <text x="60" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#666">Rejuvenating</text>
+  <text x="60" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#666">Face Mask</text>
+  
+  <!-- Volume -->
+  <text x="60" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#999">75g/2.65 OZ</text>
+</svg>

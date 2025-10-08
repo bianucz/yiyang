@@ -1,0 +1,25 @@
+<svg width="120" height="180" xmlns="http://www.w3.org/2000/svg">
+  <!-- Spray bottle body -->
+  <rect x="20" y="40" width="80" height="120" rx="8" ry="8" fill="#f0f0f0" stroke="#d0d0d0" stroke-width="2"/>
+  
+  <!-- Spray nozzle -->
+  <rect x="15" y="20" width="90" height="25" rx="12" ry="12" fill="#8B4CB8"/>
+  <circle cx="25" cy="32" r="3" fill="#ffffff"/>
+  
+  <!-- Label background -->
+  <rect x="25" y="60" width="70" height="80" rx="10" ry="10" fill="#ffffff" stroke="#ddd" stroke-width="1"/>
+  
+  <!-- Brand name -->
+  <text x="60" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#8B4CB8">TK-YIYANG</text>
+  
+  <!-- Leaf icon -->
+  <path d="M45 90 Q55 85, 65 90 Q60 100, 50 105 Q45 100, 45 90" fill="#4CAF50"/>
+  <path d="M50 90 L55 100" stroke="#4CAF50" stroke-width="1"/>
+  
+  <!-- Product name -->
+  <text x="60" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#666">Plant Extract</text>
+  <text x="60" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#666">Spray</text>
+  
+  <!-- Volume -->
+  <text x="60" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#999">50ml/1.69 FL.OZ</text>
+</svg>
