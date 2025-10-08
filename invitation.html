@@ -257,9 +257,9 @@
           <span class="location-highlight">Ptak C2</span>
         </div>
       </div>
-    </div>
+  </div>
 
-    <div class="contact-section">
+  <div class="contact-section">
       <div class="contact-info">
         <h3 class="section-title">Visit Us at Zone C2</h3>
         <div class="contact-item">📧 Contact via Warsaw Expo</div>
@@ -274,38 +274,64 @@
         </div>
       </div>
     </div>
-  </body>
-  <!-- Site banner: moved to bottom so it appears after page content -->
-  <footer class="site-banner" role="contentinfo">
-    <img
-      src="images/ptak-rehab-banner.png"
-      alt="Rehabilitation and Physiotherapy Trade Fair banner"
-      class="banner-img"
-    />
-  </footer>
 
-  <style>
-    /* Banner styles (scoped to file) */
-    .site-banner {
-      width: 100%;
-      display: block;
-      overflow: hidden;
-      background: #0b1730;
-    }
+    <!-- Site banner: moved inside body and pinned to bottom -->
+    <footer class="site-banner" role="contentinfo">
+      <img
+        src="images/ptak-rehab-banner.png"
+        alt="Rehabilitation and Physiotherapy Trade Fair banner"
+        class="banner-img"
+      />
+    </footer>
 
-    .site-banner .banner-img {
-      width: 100%;
-      height: auto;
-      display: block;
-      /* show full image without cropping */
-      max-height: none;
-      object-fit: initial;
-    }
-
-    @media (max-width: 480px) {
-      .site-banner .banner-img {
-        max-height: 260px;
+    <style>
+      /* Banner styles (scoped to file) */
+      /* Ensure the page fills the viewport and footer sits at the bottom with no gap */
+      html, body {
+        height: 100%;
       }
-    }
-  </style>
+
+      body {
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* Make main content grow so footer is pushed to bottom */
+      .header,
+      .contact-section {
+        flex: 0 0 auto;
+      }
+
+      /* Ensure the content area takes remaining space if needed */
+      main, .content-section {
+        flex: 1 0 auto;
+      }
+
+      .site-banner {
+        width: 100%;
+        display: block;
+        overflow: hidden;
+        background: #0b1730;
+        margin: 0; /* remove any default margins */
+        position: fixed; /* pin to viewport bottom */
+        left: 0;
+        bottom: 0;
+        z-index: 1000;
+      }
+
+      .site-banner .banner-img {
+        width: 100%;
+        height: auto;
+        display: block;
+        max-height: none;
+        object-fit: cover; /* cover to avoid gaps on wide screens */
+      }
+
+      @media (max-width: 480px) {
+        .site-banner .banner-img {
+          max-height: 260px;
+        }
+      }
+    </style>
+  </body>
 </html>
