@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TK-YIYANG at International Rehabilitation & Physiotherapy Fair</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #4a148c 0%, #7b1fa2 50%, #ab47bc 100%);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .header-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 89vh;
+            background-image: url('images/family-transparent.png');
+            background-size: contain;
+            background-position: center top;
+            background-repeat: no-repeat;
+            opacity: 0.4;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .invitation-container {
+            padding: 20px;
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .logo {
+            margin-bottom: 30px;
+        }
+
+        .logo-text {
+            font-size: 3.5em;
+            font-weight: bold;
+            color: #ffd700;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .logo-subtitle {
+            font-size: 1.2em;
+            color: #ffd700;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+        }
+
+        .spiral {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            background: conic-gradient(from 0deg, #ffd700, #ffeb3b, #ffd700);
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .spiral::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            background: linear-gradient(135deg, #4a148c, #7b1fa2);
+            border-radius: 50%;
+        }
+
+        .event-title {
+            font-size: 2.2em;
+            font-weight: bold;
+            margin: 30px 0 20px;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .event-subtitle {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+            color: #f0f0f0;
+        }
+
+        .tagline {
+            font-size: 1.4em;
+            margin: 30px 0;
+            color: #ffd700;
+            font-style: italic;
+            line-height: 1.4;
+        }
+
+        .products-section {
+            margin: 40px 0;
+            padding: 20px 0;
+        }
+
+        .products-title {
+            font-size: 1.8em;
+            color: #ffd700;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .product-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .product-item {
+            padding: 15px 0;
+        }
+
+        .product-name {
+            font-weight: bold;
+            color: #ffd700;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .product-description {
+            font-size: 0.9em;
+            line-height: 1.4;
+            color: #f0f0f0;
+        }
+
+        .event-details {
+            padding: 20px 0;
+            margin: 30px 0;
+        }
+
+        .date {
+            font-size: 2em;
+            font-weight: bold;
+            color: #ffd700;
+            margin-bottom: 15px;
+        }
+
+        .venue {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+
+        .zone {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #ffd700;
+            margin-top: 15px;
+        }
+
+        .contact-info {
+            margin-top: 40px;
+            padding-top: 20px;
+        }
+
+        .website {
+            font-size: 1.3em;
+            color: #ffd700;
+            margin-bottom: 15px;
+        }
+
+        .phone {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+
+        .email {
+            font-size: 1.1em;
+            color: #f0f0f0;
+        }
+
+        .invitation-text {
+            font-size: 1.2em;
+            margin: 20px 0;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .invitation-container {
+                padding: 15px;
+            }
+            
+            .logo-text {
+                font-size: 2.2em;
+            }
+            
+            .event-title {
+                font-size: 1.6em;
+            }
+            
+            .date {
+                font-size: 1.4em;
+            }
+            
+            .products-title {
+                font-size: 1.4em;
+            }
+            
+            .tagline {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header-background"></div>
+    <div class="invitation-container">
+        <div class="logo">
+            <div class="spiral"></div>
+            <div class="logo-text">TK-YIYANG</div>
+            <div class="logo-subtitle">NATURALNE KOSMETYKI</div>
+        </div>
+
+        <div class="event-title">INVITATION</div>
+        <div class="event-subtitle">International Trade Fair for Rehabilitation and Physiotherapy</div>
+
+        <div class="tagline">
+            Odkryj harmonię natury<br>
+            w pielęgnacji twarzy i ciała
+        </div>
+
+        <div class="products-section">
+            <div class="products-title">Naturalne chińskie kosmetyki</div>
+            <div class="product-grid">
+                <div class="product-item">
+                    <div class="product-name">Regenerujący balsam rozgrzewający</div>
+                    <div class="product-description">Wspomaga krążenie skórne, usuwa zimno i wilgoć, poprawia stan nadmiernej wilgotności w organizmie</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">Płyn pod oczy z ekstraktami roślinnymi</div>
+                    <div class="product-description">Łagodzi suchą skórę wokół oczu, rozświetla i nawilża, sprawiając że staje się gładka i lśniąca</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">Odmładzająca maska do twarzy</div>
+                    <div class="product-description">Nawilża skórę twarzy, wygładza drobne zmarszczki, sprawiając że skóra staje się jędrna i nawilżona</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">Spray odmładzający</div>
+                    <div class="product-description">Zawiera bogatą esencję roślinną, wspomaga odbudowę bariery ochronnej, zwiększa zawartość wody w skórze</div>
+                </div>
+                <div class="product-item">
+                    <div class="product-name">Krem regenerująco-odmładzający</div>
+                    <div class="product-description">Uzupełnia nawilżenie i składniki odżywcze, łagodzi dyskomfort spowodowany suchością skóry</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="invitation-text">
+            Naturalne chińskie kosmetyki do twarzy i ciała,<br>
+            stworzone z myślą o harmonii z naturą. Odkryj moc<br>
+            tradycyjnych, roślinnych składników dla<br>
+            zdrowej i pięknej skóry.
+        </div>
+
+        <div class="event-details">
+            <div class="date">OCTOBER 9-11, 2025</div>
+            <div class="venue">International Trade Fair for Rehabilitation and Physiotherapy</div>
+            <div class="zone">Zone C2</div>
+        </div>
+
+        <div class="contact-info">
+            <div class="website">🌐 akcesoriamasazu.com</div>
+            <div class="phone">📞 579 176 321, 731 855 555</div>
+            <div class="email">✉️ akcesoriamasazu@gmail.com</div>
+        </div>
+    </div>
+</body>
+</html>
