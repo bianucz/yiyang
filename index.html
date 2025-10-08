@@ -1,462 +1,484 @@
 <!DOCTYPE html>
 <html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TK-YIYANG - Naturalne Kosmetyki</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            color: #fff;
-            background: linear-gradient(135deg, #8B4CB8 0%, #5D2E8B 50%, #3E1B5E 100%);
-            min-height: 100vh;
-        }
-        
-        .page {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            text-align: center;
-        }
-        
-        /* Page 1 Styles */
-        .logo {
-            margin-bottom: 30px;
-        }
-        
-        .logo-symbol {
-            width: 120px;
-            height: 120px;
-            margin: 0 auto 20px;
-            background: linear-gradient(45deg, #FFD700, #FFA500);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 60px;
-            font-weight: bold;
-            color: #8B4CB8;
-            position: relative;
-        }
-        
-        .logo-symbol::before {
-            content: '';
-            position: absolute;
-            width: 80px;
-            height: 80px;
-            border: 4px solid #FFD700;
-            border-radius: 50%;
-            border-top: 4px solid transparent;
-            border-right: 4px solid transparent;
-            transform: rotate(45deg);
-        }
-        
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Arial", sans-serif;
+        line-height: 1.6;
+        color: #fff;
+        background: linear-gradient(
+          135deg,
+          #8b4cb8 0%,
+          #5d2e8b 50%,
+          #3e1b5e 100%
+        );
+        min-height: 100vh;
+      }
+
+      .page {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        text-align: center;
+      }
+
+      /* Page 1 Styles */
+      .logo {
+        margin-bottom: 30px;
+      }
+
+      .logo-symbol {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto 20px;
+        background: linear-gradient(45deg, #ffd700, #ffa500);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 60px;
+        font-weight: bold;
+        color: #8b4cb8;
+        position: relative;
+      }
+
+      .logo-symbol::before {
+        content: "";
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        border: 4px solid #ffd700;
+        border-radius: 50%;
+        border-top: 4px solid transparent;
+        border-right: 4px solid transparent;
+        transform: rotate(45deg);
+      }
+
+      .brand-name {
+        font-size: 48px;
+        font-weight: bold;
+        color: #ffd700;
+        margin-bottom: 10px;
+        letter-spacing: 2px;
+      }
+
+      .tagline {
+        font-size: 16px;
+        color: #ffd700;
+        margin-bottom: 40px;
+        letter-spacing: 1px;
+      }
+
+      .main-heading {
+        font-size: 42px;
+        font-weight: 300;
+        margin-bottom: 40px;
+        line-height: 1.2;
+        color: #ffd700;
+      }
+
+      .products-showcase {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 60px 0;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      .product-item,
+      .product-mini {
+        width: 120px;
+        height: 180px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 15px 15px 5px 5px;
+        position: relative;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      }
+
+      .product-mini.tube {
+        border-radius: 25px;
+        background-image: url("images/regenerating-body-balm.svg");
+      }
+
+      .product-mini.spray {
+        background-image: url("images/plant-extract-spray.svg");
+      }
+
+      .product-mini.serum {
+        width: 80px;
+        height: 140px;
+        background-image: url("images/eye-serum.svg");
+      }
+
+      .product-mini.spray-dark {
+        background-image: url("images/rejuvenating-spray-dark.svg");
+      }
+
+      .product-mini.cream {
+        width: 140px;
+        height: 100px;
+        border-radius: 50%;
+        background-image: url("images/face-cream.svg");
+      }
+
+      .main-product-display {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        padding: 30px;
+        backdrop-filter: blur(10px);
+      }
+
+      .product-collection {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .product-label {
+        display: none;
+      }
+
+      .description {
+        font-size: 20px;
+        line-height: 1.4;
+        margin: 60px 0;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .contact-info {
+        margin-top: 80px;
+      }
+
+      .website {
+        font-size: 32px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #ffd700;
+      }
+
+      .contact-details {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        flex-wrap: wrap;
+        font-size: 18px;
+      }
+
+      .phone,
+      .email {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      /* Page 2 Styles */
+      .page-2 {
+        margin-top: 100px;
+      }
+
+      .product-section {
+        margin-bottom: 80px;
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        text-align: left;
+      }
+
+      .product-image {
+        width: 120px;
+        height: 180px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        flex-shrink: 0;
+        position: relative;
+      }
+
+      .product-image.balm {
+        background-image: url("images/regenerating-body-balm.svg");
+      }
+
+      .product-image.eye-liquid {
+        background-image: url("images/plant-extract-spray.svg");
+      }
+
+      .product-image.face-mask {
+        background-image: url("images/face-mask.svg");
+      }
+
+      .product-image.spray {
+        background-image: url("images/rejuvenating-spray-dark.svg");
+      }
+
+      .product-image.cream {
+        background-image: url("images/face-cream.svg");
+        width: 140px;
+        height: 100px;
+        border-radius: 50%;
+      }
+
+      .product-info {
+        flex: 1;
+      }
+
+      .product-title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #ffd700;
+      }
+
+      .product-description {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+      }
+
+      .product-price {
+        font-size: 28px;
+        font-weight: bold;
+        color: #ffd700;
+      }
+
+      .spray-product .product-image {
+        background: linear-gradient(to bottom, #2a2a2a, #1a1a1a);
+        border-radius: 8px;
+      }
+
+      .cream-product .product-image {
+        width: 140px;
+        height: 100px;
+        border-radius: 50%;
+        background: linear-gradient(to bottom, #f5f5f5, #e0e0e0);
+      }
+
+      @media (max-width: 768px) {
         .brand-name {
-            font-size: 48px;
-            font-weight: bold;
-            color: #FFD700;
-            margin-bottom: 10px;
-            letter-spacing: 2px;
+          font-size: 36px;
         }
-        
-        .tagline {
-            font-size: 16px;
-            color: #FFD700;
-            margin-bottom: 40px;
-            letter-spacing: 1px;
-        }
-        
+
         .main-heading {
-            font-size: 42px;
-            font-weight: 300;
-            margin-bottom: 40px;
-            line-height: 1.2;
-            color: #FFD700;
+          font-size: 28px;
         }
-        
+
         .products-showcase {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 60px 0;
-            gap: 20px;
-            flex-wrap: wrap;
+          gap: 10px;
         }
-        
-        .product-item, .product-mini {
-            width: 120px;
-            height: 180px;
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-            border-radius: 15px 15px 5px 5px;
-            position: relative;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+
+        .product-item {
+          width: 80px;
+          height: 120px;
         }
-        
-        .product-mini.tube {
-            border-radius: 25px;
-            background-image: url('images/regenerating-body-balm.svg');
-        }
-        
-        .product-mini.spray {
-            background-image: url('images/plant-extract-spray.svg');
-        }
-        
-        .product-mini.serum {
-            width: 80px;
-            height: 140px;
-            background-image: url('images/eye-serum.svg');
-        }
-        
-        .product-mini.spray-dark {
-            background-image: url('images/rejuvenating-spray-dark.svg');
-        }
-        
-        .product-mini.cream {
-            width: 140px;
-            height: 100px;
-            border-radius: 50%;
-            background-image: url('images/face-cream.svg');
-        }
-        
-        .main-product-display {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: rgba(255,255,255,0.1);
-            border-radius: 20px;
-            padding: 30px;
-            backdrop-filter: blur(10px);
-        }
-        
-        .product-collection {
-            display: flex;
-            gap: 20px;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        
-        .product-label {
-            display: none;
-        }
-        
+
         .description {
-            font-size: 20px;
-            line-height: 1.4;
-            margin: 60px 0;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
+          font-size: 16px;
         }
-        
-        .contact-info {
-            margin-top: 80px;
-        }
-        
+
         .website {
-            font-size: 32px;
-            font-weight: bold;
-            margin-bottom: 20px;
-            color: #FFD700;
+          font-size: 24px;
         }
-        
+
         .contact-details {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 40px;
-            flex-wrap: wrap;
-            font-size: 18px;
+          flex-direction: column;
+          gap: 20px;
         }
-        
-        .phone, .email {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        /* Page 2 Styles */
-        .page-2 {
-            margin-top: 100px;
-        }
-        
+
         .product-section {
-            margin-bottom: 80px;
-            display: flex;
-            align-items: center;
-            gap: 40px;
-            text-align: left;
+          flex-direction: column;
+          text-align: center;
         }
-        
-        .product-image {
-            width: 120px;
-            height: 180px;
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-            border-radius: 15px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-            flex-shrink: 0;
-            position: relative;
-        }
-        
-        .product-image.balm {
-            background-image: url('images/regenerating-body-balm.svg');
-        }
-        
-        .product-image.eye-liquid {
-            background-image: url('images/plant-extract-spray.svg');
-        }
-        
-        .product-image.face-mask {
-            background-image: url('images/face-mask.svg');
-        }
-        
-        .product-image.spray {
-            background-image: url('images/rejuvenating-spray-dark.svg');
-        }
-        
-        .product-image.cream {
-            background-image: url('images/face-cream.svg');
-            width: 140px;
-            height: 100px;
-            border-radius: 50%;
-        }
-        
-        
-        .product-info {
-            flex: 1;
-        }
-        
-        .product-title {
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 20px;
-            color: #FFD700;
-        }
-        
-        .product-description {
-            font-size: 16px;
-            line-height: 1.5;
-            margin-bottom: 20px;
-        }
-        
-        .product-price {
-            font-size: 28px;
-            font-weight: bold;
-            color: #FFD700;
-        }
-        
-        .spray-product .product-image {
-            background: linear-gradient(to bottom, #2a2a2a, #1a1a1a);
-            border-radius: 8px;
-        }
-        
-        .cream-product .product-image {
-            width: 140px;
-            height: 100px;
-            border-radius: 50%;
-            background: linear-gradient(to bottom, #f5f5f5, #e0e0e0);
-        }
-        
-        @media (max-width: 768px) {
-            .brand-name {
-                font-size: 36px;
-            }
-            
-            .main-heading {
-                font-size: 28px;
-            }
-            
-            .products-showcase {
-                gap: 10px;
-            }
-            
-            .product-item {
-                width: 80px;
-                height: 120px;
-            }
-            
-            .description {
-                font-size: 16px;
-            }
-            
-            .website {
-                font-size: 24px;
-            }
-            
-            .contact-details {
-                flex-direction: column;
-                gap: 20px;
-            }
-            
-            .product-section {
-                flex-direction: column;
-                text-align: center;
-            }
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Page 1 -->
     <div class="page">
-        <div class="logo">
-            <div class="logo-symbol">G</div>
-            <div class="brand-name">TK-YIYANG</div>
-            <div class="tagline">NATURALNE KOSMETYKI</div>
+      <div class="logo">
+        <div class="logo-symbol">G</div>
+        <div class="brand-name">TK-YIYANG</div>
+        <div class="tagline">NATURALNE KOSMETYKI</div>
+      </div>
+
+      <h1 class="main-heading">
+        Odkryj harmonię natury<br />
+        w pielęgnacji twarzy i ciała
+      </h1>
+
+      <div class="products-showcase">
+        <div class="product-item tube">
+          <div class="product-label">TK-YIYANG</div>
         </div>
-        
-        <h1 class="main-heading">
-            Odkryj harmonię natury<br>
-            w pielęgnacji twarzy i ciała
-        </h1>
-        
-        <div class="products-showcase">
-            <div class="product-item tube">
-                <div class="product-label">TK-YIYANG</div>
-            </div>
-            <div class="product-item spray">
-                <div class="product-label">TK-YIYANG</div>
-            </div>
-            <div class="product-item serum">
-                <div class="product-label">TK-YIYANG</div>
-            </div>
-            <div class="product-item spray" style="background: linear-gradient(to bottom, #2a2a2a, #1a1a1a);">
-                <div class="product-label" style="color: #FFD700;">TK-YIYANG</div>
-            </div>
-            <div class="product-item cream">
-                <div class="product-label">TK-YIYANG</div>
-            </div>
+        <div class="product-item spray">
+          <div class="product-label">TK-YIYANG</div>
         </div>
-        
-        <p class="description">
-            Naturalne chińskie kosmetyki do twarzy i ciała,<br>
-            stworzone z myślą o harmonii z naturą. Odkryj moc<br>
-            tradycyjnych, roślinnych składników dla<br>
-            zdrowej i pięknej skóry.
-        </p>
-        
-        <div class="contact-info">
-            <div class="website">akcersoriamasazu.com</div>
-            <div class="contact-details">
-                <div class="phone">📞 579 176 321, 731 855 555</div>
-                <div class="email">✉️ akcersoriamasazu@gmail.com</div>
-            </div>
+        <div class="product-item serum">
+          <div class="product-label">TK-YIYANG</div>
         </div>
+        <div
+          class="product-item spray"
+          style="background: linear-gradient(to bottom, #2a2a2a, #1a1a1a)"
+        >
+          <div class="product-label" style="color: #ffd700">TK-YIYANG</div>
+        </div>
+        <div class="product-item cream">
+          <div class="product-label">TK-YIYANG</div>
+        </div>
+      </div>
+
+      <p class="description">
+        Naturalne chińskie kosmetyki do twarzy i ciała,<br />
+        stworzone z myślą o harmonii z naturą. Odkryj moc<br />
+        tradycyjnych, roślinnych składników dla<br />
+        zdrowej i pięknej skóry.
+      </p>
+
+      <div class="contact-info">
+        <div class="website">akcersoriamasazu.com</div>
+        <div class="contact-details">
+          <div class="phone">📞 579 176 321, 731 855 555</div>
+          <div class="email">✉️ akcersoriamasazu@gmail.com</div>
+        </div>
+      </div>
     </div>
-    
+
     <!-- Page 2 -->
     <div class="page page-2">
-        <div class="product-section">
-            <div class="product-image balm"></div>
-            <div class="product-info">
-                <h2 class="product-title">Regenerujący balsam rozgrzewający do ciała</h2>
-                <p class="product-description">
-                    Ciesz się pielęgnacją na poziomie SPA z łatwością.<br>
-                    Dzięki różnym ekstraktom roślinnym balsam<br>
-                    wspomaga krążenie skórne, usuwa zimno i wilgoć<br>
-                    oraz poprawia stan nadmiernej wilgotności w organizmie.<br>
-                    Ponadto łagodzi, ujędrnia i pielęgnuje skórę,<br>
-                    ma działanie przeciwzapalne, antybakteryjne i antyoksydacyjne.
-                </p>
-                <div class="product-price">198,- /szt.</div>
-            </div>
+      <div class="product-section">
+        <div class="product-image balm"></div>
+        <div class="product-info">
+          <h2 class="product-title">
+            Regenerujący balsam rozgrzewający do ciała
+          </h2>
+          <p class="product-description">
+            Ciesz się pielęgnacją na poziomie SPA z łatwością.<br />
+            Dzięki różnym ekstraktom roślinnym balsam<br />
+            wspomaga krążenie skórne, usuwa zimno i wilgoć<br />
+            oraz poprawia stan nadmiernej wilgotności w organizmie.<br />
+            Ponadto łagodzi, ujędrnia i pielęgnuje skórę,<br />
+            ma działanie przeciwzapalne, antybakteryjne i antyoksydacyjne.
+          </p>
+          <div class="product-price">198,- /szt.</div>
         </div>
-        
-        <div class="product-section">
-            <div class="product-image eye-liquid"></div>
-            <div class="product-info">
-                <h2 class="product-title">Płyn pod oczy z ekstraktami roślinnymi</h2>
-                <p class="product-description">
-                    Zawiera ekstrakty z różnych roślin, które mogą łagodzić<br>
-                    suchą skórę wokół oczu, rozświetlać ją i nawilżać,<br>
-                    a jednocześnie napinać skórę wokół oczu, sprawiając, że<br>
-                    staje się ona gładka i lśniąca.
-                </p>
-                <div class="product-price">188,- /szt.</div>
-            </div>
+      </div>
+
+      <div class="product-section">
+        <div class="product-image eye-liquid"></div>
+        <div class="product-info">
+          <h2 class="product-title">Płyn pod oczy z ekstraktami roślinnymi</h2>
+          <p class="product-description">
+            Zawiera ekstrakty z różnych roślin, które mogą łagodzić<br />
+            suchą skórę wokół oczu, rozświetlać ją i nawilżać,<br />
+            a jednocześnie napinać skórę wokół oczu, sprawiając, że<br />
+            staje się ona gładka i lśniąca.
+          </p>
+          <div class="product-price">188,- /szt.</div>
         </div>
-        
-        <div class="product-section">
-            <div class="product-image face-mask"></div>
-            <div class="product-info">
-                <h2 class="product-title">Odmładzająca maska do twarzy z ekstraktami roślinnymi</h2>
-                <p class="product-description">
-                    Nawilża skórę twarzy, wygładza drobne zmarszczki, sprawia, że<br>
-                    skóra staje się jędrna, nawilżona,<br>
-                    lekka, wodnista, jedwabista i pełna uroku.
-                </p>
-                <div class="product-price">188,- /szt.</div>
-            </div>
+      </div>
+
+      <div class="product-section">
+        <div class="product-image face-mask"></div>
+        <div class="product-info">
+          <h2 class="product-title">
+            Odmładzająca maska do twarzy z ekstraktami roślinnymi
+          </h2>
+          <p class="product-description">
+            Nawilża skórę twarzy, wygładza drobne zmarszczki, sprawia, że<br />
+            skóra staje się jędrna, nawilżona,<br />
+            lekka, wodnista, jedwabista i pełna uroku.
+          </p>
+          <div class="product-price">188,- /szt.</div>
         </div>
-        
-        <div class="product-section spray-product">
-            <div class="product-image spray"></div>
-            <div class="product-info">
-                <h2 class="product-title">Spray odmładzający z ekstraktami roślinnymi</h2>
-                <p class="product-description">
-                    Zawiera bogatą esencję roślinną, która wspomaga odbudowę<br>
-                    bariery ochronnej, zwiększa zawartość wody w warstwie rogowej naskórka,<br>
-                    uzupełnia nawilżenie i zatrzymuje wilgoć, dzięki czemu skóra jest<br>
-                    nawilżona i delikatna. Może również łagodzić suchość i napięcie skóry,<br>
-                    łagodzić dyskomfort spowodowany suchością, poprawiać nawilżenie skóry,<br>
-                    ujędrniać, wygładzać i błyszczeć, a także chronić ją
-                </p>
-                <div class="product-price">188,- / 2 szt.</div>
-            </div>
+      </div>
+
+      <div class="product-section spray-product">
+        <div class="product-image spray"></div>
+        <div class="product-info">
+          <h2 class="product-title">
+            Spray odmładzający z ekstraktami roślinnymi
+          </h2>
+          <p class="product-description">
+            Zawiera bogatą esencję roślinną, która wspomaga odbudowę<br />
+            bariery ochronnej, zwiększa zawartość wody w warstwie rogowej
+            naskórka,<br />
+            uzupełnia nawilżenie i zatrzymuje wilgoć, dzięki czemu skóra jest<br />
+            nawilżona i delikatna. Może również łagodzić suchość i napięcie
+            skóry,<br />
+            łagodzić dyskomfort spowodowany suchością, poprawiać nawilżenie
+            skóry,<br />
+            ujędrniać, wygładzać i błyszczeć, a także chronić ją
+          </p>
+          <div class="product-price">188,- / 2 szt.</div>
         </div>
-        
-        <div class="product-section cream-product">
-            <div class="product-image cream"></div>
-            <div class="product-info">
-                <h2 class="product-title">Krem regenerująco-odmładzający z agarem</h2>
-                <p class="product-description">
-                    Zawiera esencje z różnych roślin, które wspomagają silną<br>
-                    odbudowę bariery ochronnej skóry, uzupełniają nawilżenie i składniki<br>
-                    odżywcze, łagodzą dyskomfort spowodowany suchością skóry<br>
-                    oraz sprawiają, że skóra jest nawilżona i jędrna.
-                </p>
-                <div class="product-price">178,- /szt.</div>
-            </div>
+      </div>
+
+      <div class="product-section cream-product">
+        <div class="product-image cream"></div>
+        <div class="product-info">
+          <h2 class="product-title">Krem regenerująco-odmładzający z agarem</h2>
+          <p class="product-description">
+            Zawiera esencje z różnych roślin, które wspomagają silną<br />
+            odbudowę bariery ochronnej skóry, uzupełniają nawilżenie i
+            składniki<br />
+            odżywcze, łagodzą dyskomfort spowodowany suchością skóry<br />
+            oraz sprawiają, że skóra jest nawilżona i jędrna.
+          </p>
+          <div class="product-price">178,- /szt.</div>
         </div>
+      </div>
     </div>
-        <!-- Site banner: moved to bottom so it appears after page content -->
-        <footer class="site-banner" role="contentinfo">
-            <img src="images/ptak-rehab-banner.png" alt="Rehabilitation and Physiotherapy Trade Fair banner" class="banner-img" />
-        </footer>
+    <!-- Site banner: moved to bottom so it appears after page content -->
+    <footer class="site-banner" role="contentinfo">
+      <img
+        src="images/ptak-rehab-banner.png"
+        alt="Rehabilitation and Physiotherapy Trade Fair banner"
+        class="banner-img"
+      />
+    </footer>
 
-        <style>
-            /* Banner styles (scoped to file) */
-            .site-banner {
-                width: 100%;
-                display: block;
-                overflow: hidden;
-                background: #0b1730;
-            }
+    <style>
+      /* Banner styles (scoped to file) */
+      .site-banner {
+        width: 100%;
+        display: block;
+        overflow: hidden;
+        background: #0b1730;
+      }
 
-            .site-banner .banner-img {
-                width: 100%;
-                height: auto;
-                display: block;
-                /* show full image without cropping */
-                max-height: none;
-                object-fit: initial;
-            }
+      .site-banner .banner-img {
+        width: 100%;
+        height: auto;
+        display: block;
+        /* show full image without cropping */
+        max-height: none;
+        object-fit: initial;
+      }
 
-            @media (max-width: 480px) {
-                .site-banner .banner-img {
-                    max-height: 260px;
-                }
-            }
-        </style>
-
-    </body>
-    </html>
+      @media (max-width: 480px) {
+        .site-banner .banner-img {
+          max-height: 260px;
+        }
+      }
+    </style>
+  </body>
+</html>
