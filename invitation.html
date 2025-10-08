@@ -289,14 +289,12 @@
     <style>
       /* Banner styles (scoped to file) */
       /* Ensure the page fills the viewport and footer sits at the bottom with no gap */
-      html,
-      body {
-        height: 100%;
-      }
-
+      /* Use min-height on body and flex layout so footer can be pushed
+         to the bottom for short pages but remain below content for long pages */
       body {
         display: flex;
         flex-direction: column;
+        min-height: 100vh;
       }
 
       /* Make main content grow so footer is pushed to bottom */
@@ -317,9 +315,8 @@
         overflow: hidden;
         background: #0b1730;
         margin: 0; /* remove any default margins */
-        position: fixed; /* pin to viewport bottom */
-        left: 0;
-        bottom: 0;
+        position: static; /* allow it to be part of the flow */
+        margin-top: auto; /* push footer to bottom when page is short */
         z-index: 1000;
       }
 
