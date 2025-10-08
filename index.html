@@ -428,5 +428,35 @@
             </div>
         </div>
     </div>
-</body>
-</html>
+        <!-- Site banner: moved to bottom so it appears after page content -->
+        <footer class="site-banner" role="contentinfo">
+            <img src="images/ptak-rehab-banner.png" alt="Rehabilitation and Physiotherapy Trade Fair banner" class="banner-img" />
+        </footer>
+
+        <style>
+            /* Banner styles (scoped to file) */
+            .site-banner {
+                width: 100%;
+                display: block;
+                overflow: hidden;
+                background: #0b1730;
+            }
+
+            .site-banner .banner-img {
+                width: 100%;
+                height: auto;
+                display: block;
+                /* show full image without cropping */
+                max-height: none;
+                object-fit: initial;
+            }
+
+            @media (max-width: 480px) {
+                .site-banner .banner-img {
+                    max-height: 260px;
+                }
+            }
+        </style>
+
+    </body>
+    </html>
