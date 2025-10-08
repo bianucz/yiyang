@@ -21,7 +21,7 @@
       }
 
       .header {
-        background: linear-gradient(135deg, #4caf50, #8bc34a);
+        background: transparent; /* let body gradient show through to remove seam */
         height: auto; /* allow content to determine height */
         display: flex;
         flex-direction: column;
@@ -110,11 +110,12 @@
       }
 
       .location-highlight {
-        background: #ffd700;
+        background: transparent; /* removed yellow background */
         color: #ffffff;
         padding: 8px 15px;
         border-radius: 15px;
         font-weight: bold;
+        border: none; /* removed circular border */
       }
 
       .content-section {
@@ -186,9 +187,10 @@
         text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
       }
 
+      /* Make links visibly underlined */
       .contact-item a {
         color: #ffffff;
-        text-decoration: none;
+        text-decoration: underline;
       }
 
       .contact-item a:hover {
@@ -264,15 +266,10 @@
     <div class="contact-section">
       <div class="contact-info">
         <h3 class="section-title">Visit Us at Zone C12</h3>
-        <div class="contact-item">☎️ Simon Yang: 731 855 555</div>
-        <div class="contact-item">📧 newmilano@163.com</div>
+        <div class="contact-item">Contact: 731 855 555 (Simon Yang)</div>
+        <div class="contact-item">Email: newmilano@163.com</div>
         <div class="contact-item">
-          👈
-          <a
-            href="http://bianucz.github.io/yiyang/brochures.pdf"
-            target="_blank"
-            >Brochures</a
-          >
+          <a href="brochures.pdf" download>Download Brochures</a>
         </div>
       </div>
     </div>
