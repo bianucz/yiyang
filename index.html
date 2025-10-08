@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yiyang - Promotional Page</title>
+    <title>TK-YIYANG - Naturalne Kosmetyki</title>
     <style>
         * {
             margin: 0;
@@ -12,145 +12,387 @@
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: 'Arial', sans-serif;
             line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            background: linear-gradient(135deg, #8B4CB8 0%, #5D2E8B 50%, #3E1B5E 100%);
             min-height: 100vh;
         }
         
-        .container {
-            max-width: 1200px;
+        .page {
+            max-width: 800px;
             margin: 0 auto;
-            padding: 2rem;
-        }
-        
-        .hero {
+            padding: 40px 20px;
             text-align: center;
-            padding: 4rem 0;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-            margin-bottom: 3rem;
         }
         
-        .hero h1 {
-            font-size: 3.5rem;
-            color: white;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        /* Page 1 Styles */
+        .logo {
+            margin-bottom: 30px;
         }
         
-        .hero p {
-            font-size: 1.3rem;
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 2rem;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            padding: 1rem 2rem;
-            background: #ff6b6b;
-            color: white;
-            text-decoration: none;
-            border-radius: 50px;
+        .logo-symbol {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 20px;
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
             font-weight: bold;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+            color: #8B4CB8;
+            position: relative;
         }
         
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255, 107, 107, 0.6);
+        .logo-symbol::before {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border: 4px solid #FFD700;
+            border-radius: 50%;
+            border-top: 4px solid transparent;
+            border-right: 4px solid transparent;
+            transform: rotate(45deg);
         }
         
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
+        .brand-name {
+            font-size: 48px;
+            font-weight: bold;
+            color: #FFD700;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
         }
         
-        .feature-card {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 2rem;
+        .tagline {
+            font-size: 16px;
+            color: #FFD700;
+            margin-bottom: 40px;
+            letter-spacing: 1px;
+        }
+        
+        .main-heading {
+            font-size: 42px;
+            font-weight: 300;
+            margin-bottom: 40px;
+            line-height: 1.2;
+            color: #FFD700;
+        }
+        
+        .products-showcase {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 60px 0;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .product-item {
+            width: 120px;
+            height: 180px;
+            background: linear-gradient(to bottom, #f8f8f8, #e8e8e8);
+            border-radius: 15px 15px 5px 5px;
+            position: relative;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+        
+        .product-item.tube {
+            border-radius: 25px;
+        }
+        
+        .product-item.spray {
+            background: linear-gradient(to bottom, #f0f0f0, #d0d0d0);
+        }
+        
+        .product-item.serum {
+            width: 80px;
+            height: 140px;
+        }
+        
+        .product-item.cream {
+            width: 140px;
+            height: 100px;
+            border-radius: 50%;
+            background: linear-gradient(to bottom, #f5f5f5, #e0e0e0);
+        }
+        
+        .product-label {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 8px;
+            color: #8B4CB8;
+            font-weight: bold;
+        }
+        
+        .description {
+            font-size: 20px;
+            line-height: 1.4;
+            margin: 60px 0;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .contact-info {
+            margin-top: 80px;
+        }
+        
+        .website {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #FFD700;
+        }
+        
+        .contact-details {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            font-size: 18px;
+        }
+        
+        .phone, .email {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        /* Page 2 Styles */
+        .page-2 {
+            margin-top: 100px;
+        }
+        
+        .product-section {
+            margin-bottom: 80px;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            text-align: left;
+        }
+        
+        .product-image {
+            width: 120px;
+            height: 180px;
+            background: linear-gradient(to bottom, #f8f8f8, #e8e8e8);
             border-radius: 15px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            transition: transform 0.3s ease;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            flex-shrink: 0;
+            position: relative;
         }
         
-        .feature-card:hover {
-            transform: translateY(-5px);
+        .product-image::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            height: 40px;
+            background: linear-gradient(135deg, #8B4CB8, #5D2E8B);
+            border-radius: 5px;
         }
         
-        .feature-card h3 {
-            color: #667eea;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
+        .product-info {
+            flex: 1;
         }
         
-        .feature-card p {
-            color: #666;
-            line-height: 1.6;
+        .product-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #FFD700;
         }
         
-        .footer {
-            text-align: center;
-            padding: 2rem 0;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
+        .product-description {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 20px;
         }
         
-        .footer p {
-            color: rgba(255, 255, 255, 0.8);
+        .product-price {
+            font-size: 28px;
+            font-weight: bold;
+            color: #FFD700;
+        }
+        
+        .spray-product .product-image {
+            background: linear-gradient(to bottom, #2a2a2a, #1a1a1a);
+            border-radius: 8px;
+        }
+        
+        .cream-product .product-image {
+            width: 140px;
+            height: 100px;
+            border-radius: 50%;
+            background: linear-gradient(to bottom, #f5f5f5, #e0e0e0);
         }
         
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
+            .brand-name {
+                font-size: 36px;
             }
             
-            .hero p {
-                font-size: 1.1rem;
+            .main-heading {
+                font-size: 28px;
             }
             
-            .container {
-                padding: 1rem;
+            .products-showcase {
+                gap: 10px;
+            }
+            
+            .product-item {
+                width: 80px;
+                height: 120px;
+            }
+            
+            .description {
+                font-size: 16px;
+            }
+            
+            .website {
+                font-size: 24px;
+            }
+            
+            .contact-details {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .product-section {
+                flex-direction: column;
+                text-align: center;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <section class="hero">
-            <h1>Welcome to Yiyang</h1>
-            <p>Discover something amazing with our innovative solution</p>
-            <a href="#features" class="cta-button">Learn More</a>
-        </section>
+    <!-- Page 1 -->
+    <div class="page">
+        <div class="logo">
+            <div class="logo-symbol">G</div>
+            <div class="brand-name">TK-YIYANG</div>
+            <div class="tagline">NATURALNE KOSMETYKI</div>
+        </div>
         
-        <section id="features" class="features">
-            <div class="feature-card">
-                <h3>🚀 Fast & Reliable</h3>
-                <p>Experience lightning-fast performance with our optimized platform designed for modern needs.</p>
-            </div>
-            
-            <div class="feature-card">
-                <h3>🎨 Beautiful Design</h3>
-                <p>Enjoy a sleek, intuitive interface that makes every interaction smooth and delightful.</p>
-            </div>
-            
-            <div class="feature-card">
-                <h3>🔒 Secure & Private</h3>
-                <p>Your data is protected with industry-leading security measures and privacy controls.</p>
-            </div>
-        </section>
+        <h1 class="main-heading">
+            Odkryj harmonię natury<br>
+            w pielęgnacji twarzy i ciała
+        </h1>
         
-        <footer class="footer">
-            <p>&copy; 2025 Yiyang. All rights reserved.</p>
-        </footer>
+        <div class="products-showcase">
+            <div class="product-item tube">
+                <div class="product-label">TK-YIYANG</div>
+            </div>
+            <div class="product-item spray">
+                <div class="product-label">TK-YIYANG</div>
+            </div>
+            <div class="product-item serum">
+                <div class="product-label">TK-YIYANG</div>
+            </div>
+            <div class="product-item spray" style="background: linear-gradient(to bottom, #2a2a2a, #1a1a1a);">
+                <div class="product-label" style="color: #FFD700;">TK-YIYANG</div>
+            </div>
+            <div class="product-item cream">
+                <div class="product-label">TK-YIYANG</div>
+            </div>
+        </div>
+        
+        <p class="description">
+            Naturalne chińskie kosmetyki do twarzy i ciała,<br>
+            stworzone z myślą o harmonii z naturą. Odkryj moc<br>
+            tradycyjnych, roślinnych składników dla<br>
+            zdrowej i pięknej skóry.
+        </p>
+        
+        <div class="contact-info">
+            <div class="website">akcersoriamasazu.com</div>
+            <div class="contact-details">
+                <div class="phone">📞 579 176 321, 731 855 555</div>
+                <div class="email">✉️ akcersoriamasazu@gmail.com</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Page 2 -->
+    <div class="page page-2">
+        <div class="product-section">
+            <div class="product-image"></div>
+            <div class="product-info">
+                <h2 class="product-title">Regenerujący balsam rozgrzewający do ciała</h2>
+                <p class="product-description">
+                    Ciesz się pielęgnacją na poziomie SPA z łatwością.<br>
+                    Dzięki różnym ekstraktom roślinnym balsam<br>
+                    wspomaga krążenie skórne, usuwa zimno i wilgoć<br>
+                    oraz poprawia stan nadmiernej wilgotności w organizmie.<br>
+                    Ponadto łagodzi, ujędrnia i pielęgnuje skórę,<br>
+                    ma działanie przeciwzapalne, antybakteryjne i antyoksydacyjne.
+                </p>
+                <div class="product-price">198,- /szt.</div>
+            </div>
+        </div>
+        
+        <div class="product-section">
+            <div class="product-image"></div>
+            <div class="product-info">
+                <h2 class="product-title">Płyn pod oczy z ekstraktami roślinnymi</h2>
+                <p class="product-description">
+                    Zawiera ekstrakty z różnych roślin, które mogą łagodzić<br>
+                    suchą skórę wokół oczu, rozświetlać ją i nawilżać,<br>
+                    a jednocześnie napinać skórę wokół oczu, sprawiając, że<br>
+                    staje się ona gładka i lśniąca.
+                </p>
+                <div class="product-price">188,- /szt.</div>
+            </div>
+        </div>
+        
+        <div class="product-section">
+            <div class="product-image"></div>
+            <div class="product-info">
+                <h2 class="product-title">Odmładzająca maska do twarzy z ekstraktami roślinnymi</h2>
+                <p class="product-description">
+                    Nawilża skórę twarzy, wygładza drobne zmarszczki, sprawia, że<br>
+                    skóra staje się jędrna, nawilżona,<br>
+                    lekka, wodnista, jedwabista i pełna uroku.
+                </p>
+                <div class="product-price">188,- /szt.</div>
+            </div>
+        </div>
+        
+        <div class="product-section spray-product">
+            <div class="product-image"></div>
+            <div class="product-info">
+                <h2 class="product-title">Spray odmładzający z ekstraktami roślinnymi</h2>
+                <p class="product-description">
+                    Zawiera bogatą esencję roślinną, która wspomaga odbudowę<br>
+                    bariery ochronnej, zwiększa zawartość wody w warstwie rogowej naskórka,<br>
+                    uzupełnia nawilżenie i zatrzymuje wilgoć, dzięki czemu skóra jest<br>
+                    nawilżona i delikatna. Może również łagodzić suchość i napięcie skóry,<br>
+                    łagodzić dyskomfort spowodowany suchością, poprawiać nawilżenie skóry,<br>
+                    ujędrniać, wygładzać i błyszczeć, a także chronić ją
+                </p>
+                <div class="product-price">188,- / 2 szt.</div>
+            </div>
+        </div>
+        
+        <div class="product-section cream-product">
+            <div class="product-image"></div>
+            <div class="product-info">
+                <h2 class="product-title">Krem regenerująco-odmładzający z agarem</h2>
+                <p class="product-description">
+                    Zawiera esencje z różnych roślin, które wspomagają silną<br>
+                    odbudowę bariery ochronnej skóry, uzupełniają nawilżenie i składniki<br>
+                    odżywcze, łagodzą dyskomfort spowodowany suchością skóry<br>
+                    oraz sprawiają, że skóra jest nawilżona i jędrna.
+                </p>
+                <div class="product-price">178,- /szt.</div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
